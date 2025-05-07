@@ -16,6 +16,10 @@ type UseTypeBaseByIdResult<TValue> = UseTypeBaseResult<TValue> & {
 
 export type EmployeeResult = UseTypeBaseAllResult<Employee[] | null>
 
-export type PaginatedTransactionsResult = UseTypeBaseAllResult<PaginatedResponse<Transaction[]> | null>
+export type PaginatedTransactionsResult = UseTypeBaseAllResult<PaginatedResponse<
+  Transaction[]
+> | null> & {
+  hasMore: boolean
+}
 
 export type TransactionsByEmployeeResult = UseTypeBaseByIdResult<Transaction[] | null>
